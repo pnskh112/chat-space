@@ -1,0 +1,112 @@
+.chat-main {
+  left:300px;
+  width:calc(100vw - 300px);
+  float:right;
+  .chat-main__group-info{
+    background-color:#fff;
+    height:100px;
+    border-bottom: #eee .5px solid;
+    .contents{
+      position: relative;
+      &__message--box{
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        .message{
+          font-size:20px;
+          color:#333;
+        }
+        .name{
+          margin-top:5px;
+          font-size:12px;
+          color:#999;
+          bottom:0;
+        }
+      }
+      &__edit{
+        padding: 0 20px;
+        position:absolute;
+        float:right;
+        top:28px;
+        right:60px;
+        size:20px;
+        border:1px solid #38aef0;;
+        height:40px;
+        text-align:center;
+        .contents__edit--btn{
+          color:#38aef0;
+          text-align: center;
+          line-height: 40px;
+          p{
+            display:inline-block;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .chat-main__message-list{
+    padding-top:35px;
+    height:calc(100vh - 225px);
+    .chat{
+      color:#333;
+      padding:0 0 46px 40px;
+      &--title{
+        font-size: 16px;
+        color:#333;
+      }
+      &--message{
+        margin-top:12px;
+        font-size: 14px;
+        color:#434A54;
+      }
+    }
+  }
+  .chat-main__message-form{
+    background-color:#d2d2d2;
+    height:90px;
+    position: relative;
+    .contents__input{
+      background-color:white;
+      position: relative;
+      height:40px;
+      width: calc(100% - 200px);
+      left: 40px;
+      top: 20px;
+      .inputbox{
+        padding-left:10px;
+        padding-right: 90px;
+        height:40px;
+        width: calc(100% - 100px);
+        border-style: none;
+      }
+      .contents__icon{
+        position: absolute;
+        padding-left: 10px;
+        font-size: 1.5em;
+        right: 10px;
+        top: 5px;
+      }
+    }
+    .contents__send{
+      .contents__send--btn{
+      padding: 0 20px;
+      position: absolute;
+      right: 40px;
+      size:20px;
+      border:1px solid #38aef0;;
+      text-align:center;
+      background-color: #38aef0;
+      color:#fff;
+      top: 20px;
+      text-align: center;
+      line-height: 40px;
+      display:inline-block;
+      text-decoration: none;
+      }
+    }
+  }
+  .hidden{
+    display: none;
+  }
+}

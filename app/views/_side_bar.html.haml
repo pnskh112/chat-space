@@ -1,0 +1,16 @@
+.side-bar
+  .side-bar__user-name
+    .contents
+      .name
+        名前
+      .icons
+        =link_to "#", class: "contents__btn" do
+          = icon('fa', 'edit',  class: "contents__btn--icon")
+        =link_to "#", class: "contents__btn" do
+          = icon('fa', 'cog',  class: "contents__btn--icon")
+  .side-bar__group-list
+    %div.clearfix
+    .side-bar__group-list--name
+      グループ名
+    .side-bar__group-list--message
+      メッセージ
