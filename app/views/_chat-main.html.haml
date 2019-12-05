@@ -3,31 +3,27 @@
     .contents
       .contents__message--box
         .message
-          グループ名
+          = @group.name
         .name
-          メンバー名
+          - @group.users.each do |user|
+            = user.name
+          end
       .contents__edit
-        =link_to "#", class: "contents__edit--btn" do
+        =link_to edit_group_path(@group), class: "contents__edit--btn" do
           %p.contents__edit-box
             Edit
   .chat-main__message-list
     .chat
-      .chat--title
-        タイトル
-      .chat--message
-        メッセージ
-    .chat
-      .chat--title
-        タイトル２
-      .chat--message
-        メッセージ
+      .messages
+        = render @messages
   .chat-main__message-form
-    .contents__input
-      %input.inputbox{name: "input", placeholder: "type a message", type: "text", value: ""} 
-      .contents__icon
-        %label{class: "input-box__image",for:"image"}
-          = icon('fas', 'image')
-          %input{type: "file",id:"image",class:"hidden"}
-    .contents__send
-      %input{type: "submit",class: "contents__send--btn",id: "message_image",value: "Send"}
-
+    = form_for [@group, @message] do |f|
+      .contents__input
+        = f.text_field :content, class: 'inputbox', placeholder: 'type a message'
+        .contents__icon
+          %label{class: "input-box__image",for:"image"}
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'hidden'
+      .contents__send
+        %input{type: "submit",class: "contents__send--btn",id: "message_image",value: "Send"}
