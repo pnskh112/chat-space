@@ -17,4 +17,4 @@
 .byebug_history
 
 # 特定のディレクトリを無視
-/public/
+# /public/
