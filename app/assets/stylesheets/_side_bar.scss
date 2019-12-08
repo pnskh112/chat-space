@@ -45,6 +45,7 @@ html, body {
     }
   }
   .side-bar__group-list{
+    overflow: scroll;
     background-color:#2f3e51;
     top:100px;
     height: calc(100vh - 100px);
