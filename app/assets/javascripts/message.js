@@ -1,7 +1,5 @@
 $(function(){
   function buildHTML(message){
-    console.log(1);
-    console.log(message);
     // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
       //メッセージに画像が含まれる場合のHTMLを作る
@@ -41,8 +39,6 @@ $(function(){
                   </div>
                 </div>`
     }
-    console.log(2);
-    console.log(html);
     return html
   }
   $('#new_message').on('submit', function(e){
@@ -63,7 +59,7 @@ $(function(){
       var html = buildHTML(message);
       $('.messages').append(html);
       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-      $('#message_content').val('');
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
