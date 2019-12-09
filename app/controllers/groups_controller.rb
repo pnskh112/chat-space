@@ -22,6 +22,7 @@ class GroupsController < ApplicationController
   end
 
   def update
+    # binding.pry
     if @group.update(group_params)
       redirect_to root_path, notice: 'グループを更新しました'
     else
