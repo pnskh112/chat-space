@@ -14,8 +14,8 @@ class User < ApplicationRecord
   # logger.close
   # # ログ出力
   # 試しに消してみた⬇︎191209 1340
-  def self.search(input,id)
-    return nil if input == ""
-    User.where(['name like ?', "%#{input}%"] ).where.not(id: id).limit(10)
-  end
+  # def self.search(input,id)
+  #   return nil if input == ""
+  #   User.where(['name like ?', "%#{input}%"] ).where.not(id: id).limit(10)
+  # end
 end

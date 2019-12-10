@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def index
   # 試しに消してみた⬇︎191209 1340
-    @users = User.search(params[:keyword], current_user.id)
+    # @users = User.search(params[:keyword], current_user.id)
   # こちらにしてみた⬇︎191209 1340
-    # return nil if params[:keyword] == ""
-    # @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    return nil if params[:keyword] == ""
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
   
     respond_to do |format|
       format.html
