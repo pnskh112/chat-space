@@ -107,7 +107,7 @@ $(function(){
     });
   })
   var group_id = $(".chat-main:last").data("group_id");
-  url = `/groups/` + group_id.toString() + `/messages`;
+  url = `/groups/${ group_id.toString() }/messages`;
   if(location.pathname === url) {
     setInterval(reloadMessages, 7000); /*一致しなければ何もしない*/
   }

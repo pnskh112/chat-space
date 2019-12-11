@@ -18,3 +18,5 @@
 
 # 特定のディレクトリを無視
 # /public/
+
+config/secrets.yml
