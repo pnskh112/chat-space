@@ -51,13 +51,18 @@ html, body {
     height: calc(100vh - 100px);
     color:#fff;
     padding:20px 20px 40px 20px;
-    &--name{
-      bottom:45px;
-      font-size: 15px;
-    }
-    &--message{
-      margin-top:5px;
-      font-size: 11px;
-    }
+    .group_class{
+      color: white;
+      padding: 200px;
+      font-size: 13px;
+      &--name{
+        bottom:45px;
+        font-size: 15px;
+      }
+      &--message{
+        margin-top:5px;
+        font-size: 11px;
+      }
   }
+}
 }
