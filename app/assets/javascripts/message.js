@@ -3,7 +3,9 @@ $(function(){
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージid取得
     last_message_id = $(".message:last").data("message-id");
     var group_id = $(".chat-main:last").data("group_id");
-    url = `../../groups/` + group_id.toString() + `/api/messages`;
+    // url = `../../groups/` + group_id.toString() + `/api/messages`;
+    url = `../../groups/${group_id.toString()}/api/messages`;
+
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
       url: url,
@@ -45,7 +47,7 @@ $(function(){
           <p class="lower-message__content">
             ${ message.content }
           </p>
-          <img src=" message.image " class="lower-message__image" >
+          <img src="${ message.image }" class="lower-message__image" >
         </div>
       </div>`
     } else if (message.content) {
@@ -106,9 +108,12 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     });
   })
-  var group_id = $(".chat-main:last").data("group_id");
-  url = `/groups/${ group_id.toString() }/messages`;
-  if(location.pathname === url) {
+  console.log(111);
+  // var group_id = $(".chat-main:last").data("group_id");
+  // console.log(group_id);
+  // url = `/groups/${ group_id.toString() }/messages`;
+  // console.log(url);
+  // if(location.pathname === url) {
     setInterval(reloadMessages, 7000); /*一致しなければ何もしない*/
-  }
+  // }
 });
