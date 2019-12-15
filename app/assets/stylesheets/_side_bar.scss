@@ -6,6 +6,7 @@ html, body {
 .side-bar{
   width:300px;
   float: left;
+  color:white;
   .side-bar__user-name{
     background-color:#253141;
     height: 100px;
@@ -25,20 +26,17 @@ html, body {
         color:white;
       }
       .icons{
+        color:white;
         position:relative;
         top:5px;
         width:60px;
         display:flex;
         justify-content:flex-end;
-        color:white;
-        .contents__btn{
+        .icons__btn{
           display: block;
-          color:#fff;
           padding-left:5px;
-          &__icon{
-            background-color:white;
+          .contents__btn--icon{
             color:white;
-            padding:10px;
           }
         }
       }

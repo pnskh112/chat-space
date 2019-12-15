@@ -7,7 +7,6 @@
         .name
           - @group.users.each do |user|
             = user.name
-          end
       .contents__edit
         =link_to edit_group_path(@group), class: "contents__edit--btn" do
           %p.contents__edit-box
